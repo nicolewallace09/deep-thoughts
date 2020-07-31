@@ -16,8 +16,17 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
+// takes in token from localStorage before each requests
 const client = new ApolloClient({
-  // uniform resource identifer 
+  request: operation => {
+    const token = localStorage.getItem('id_token');
+
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
   uri: '/graphql'
 });
 

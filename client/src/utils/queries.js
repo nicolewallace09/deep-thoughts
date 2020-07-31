@@ -60,4 +60,46 @@ export const QUERY_USER = gql`
   }
 `;
 
+// queries for logged in users -- we don't need to pass in data
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      friendCount
+      thoughts {
+        _id
+        thoughtText
+        createdAt
+        reactionCount
+        reactions {
+          _id
+          createdAt
+          reactionBody
+          username
+        }
+      }
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
 
+// queries for logged in users homepage
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
+      friendCount
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;

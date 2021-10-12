@@ -2,7 +2,7 @@
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description 
-This project is a full stack web application using the MERN Stack along with GraphQL and Apollo. This is a social media networking platform that will allow users to sign up and login, view profile pages, add friends, add reactions, and add thoughts. This application uses JWT for authentication and is deployed on Heroku.
+This project is a full stack web application using the MERN Stack along with GraphQL and Apollo. This is a blogging platform that will allow users to sign up and login, view profile pages, add friends, add reactions, and add thoughts. This application uses JWT for authentication and is deployed on Heroku.
 
 ## Table of Contents
 * [Installation](#installation)
